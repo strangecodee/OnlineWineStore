@@ -1,0 +1,62 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('/images/vineyard-background.jpg') no-repeat center center fixed; /* Replace with your background image path */
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* Container for the entire page */
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Go Back Button */
+.backButton {
+    font-size: 16px;
+    background-color: #9b111e; /* Red wine color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.backButton:hover {
+    background-color: #b71c1c; /* Lighter red wine color on hover */
+}
+
+/* Message Container */
+.messageContainer {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.messageContainer h3 {
+    font-size: 32px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.messageContainer h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Special Highlight for Amount */
+.messageContainer span {
+    font-size: 36px;
+    color: #ff9800; /* Gold color for the amount */
+}

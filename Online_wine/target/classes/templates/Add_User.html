@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Add User</title>
+    <link rel="stylesheet" href="" th:href="@{/css/Add_User.css}" />
+    <script>
+        // Function to generate a random 4-digit numeric password
+        function generateRandomPassword(length) {
+            const charset = "0123456789"; // Only digits
+            let password = "";
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * charset.length);
+                password += charset[randomIndex];
+            }
+            return password;
+        }
+
+        // Function to set the random password in the hidden input field
+        function setRandomPassword() {
+            const password = generateRandomPassword(4); 
+            document.getElementById("upassword").value = password; 
+            /* console.log("Generated password: " + password); // Optional: log it to the console */
+        }
+    </script>
+</head>
+
+<body onload="setRandomPassword()">
+    <a href="/admin/services" class="back-button">Back to Services</a>
+    <div class="addUser">
+        <h3 class="form-title">ADD NEW USER/CUSTOMER</h3>
+        <form action="" th:action="@{/addingUser}" method="post">
+            <label for="uname">User Name :</label>
+            <input type="text" name="uname" id="uname" placeholder="Enter name" required />
+
+            <label for="uemail">User Email :</label>
+            <input type="email" name="uemail" id="uemail" placeholder="Enter email" required />
+
+            <label for="unumber">User Number :</label>
+            <input type="tel" name="unumber" id="unumber" pattern="[0-9]{10}" placeholder="Enter 10 digit number" required />
+
+            <!-- Hidden input field to hold the random 4-digit password -->
+            <input type="hidden" name="upassword" id="upassword" value="" />
+
+            <button type="submit" class="submit-btn">Add User</button>
+        </form>
+    </div>
+</body>
+
+</html>

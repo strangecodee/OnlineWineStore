@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Bareilly's Finest Wine Store - Explore our wide selection of wines, locate us, and learn more about our offerings.">
+    <title>Home | Bareilly's Finest Wine Store</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="" th:href="@{/css/Navigation.css}">
+    <link rel="stylesheet" href="" th:href="@{/css/Home.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/Images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav th:fragment="navbar()" class="navbar">
+        <ul class="navbar-menu">
+            <!-- <li class="navbar-logo">
+                <img src="/Images/wine_logo.png" alt="Wine Store Logo" class="store-logo">
+            </li> -->
+            <li class="navbar-item">
+                <a href="/home">Home</a>
+            </li>
+            <li class="navbar-item">
+                <a href="/products">Wines</a>
+            </li>
+            <li class="navbar-item">
+                <a href="/location">
+                    Locate Us <i class="fa-solid fa-location-crosshairs" style="color: white;"></i>
+                </a>
+            </li>
+            <li class="navbar-item">
+                <a href="/about">About Us</a>
+            </li>
+            <li class="navbar-item">
+                <a href="/login">
+                    Log In <i class="fa-solid fa-right-to-bracket" style="color: white;"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <main>
+        <section class="hero-section">
+            <h1>Welcome to Bareilly's Finest Wine Store</h1>
+            <p>Explore our exquisite collection of wines, handpicked from the best vineyards.</p>
+            <a href="/products" class="btn-primary">Browse Wines</a>
+        </section>
+
+        <section class="featured-wines">
+            <h2>Featured Wines</h2>
+            <div class="wine-cards">
+                <div class="wine-card">
+                    <img src="/Images/red_wine.jpg" alt="Red Wine" class="wine-img">
+                    <h3>Red Wine</h3>
+                    <p>Rich and flavorful, perfect for any occasion.</p>
+                    <a href="/products/red-wine" class="btn-secondary">Learn More</a>
+                </div>
+                <div class="wine-card">
+                    <img src="/Images/white_wine.jpg" alt="White Wine" class="wine-img">
+                    <h3>White Wine</h3>
+                    <p>Crisp and refreshing, a true delight for wine lovers.</p>
+                    <a href="/products/white-wine" class="btn-secondary">Learn More</a>
+                </div>
+                <div class="wine-card">
+                    <img src="/Images/sparkling_wine.jpg" alt="Sparkling Wine" class="wine-img">
+                    <h3>Sparkling Wine</h3>
+                    <p>Celebrate in style with our finest sparkling selection.</p>
+                    <a href="/products/sparkling-wine" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    
+</body>
+</html>

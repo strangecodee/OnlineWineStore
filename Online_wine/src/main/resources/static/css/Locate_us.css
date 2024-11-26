@@ -1,0 +1,86 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #F8F5F2; /* Light text for contrast */
+    background-color: #3E1C1C; /* Wine background */
+}
+
+/* Navbar */
+nav {
+    background-color: #5A1F1F; /* Deep wine for the navbar */
+    color: #F8F5F2;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Location Header */
+.location-header {
+    text-align: center;
+    padding: 2rem;
+    background: #5A1F1F;
+    color: #F8F5F2;
+}
+
+.location-header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.location-header .location-note {
+    font-style: italic;
+    color: #EBD7D7;
+}
+
+/* Location Description */
+.location-description {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    background: #421D1D; /* Slightly darker wine tone */
+}
+
+/* Map Styling */
+.location-map {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+iframe {
+    border: 3px solid #5A1F1F;
+    border-radius: 8px;
+}
+
+/* Link Styling */
+a {
+    color: #DCC7C7; /* Light wine accent */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #F2E4E4; /* Brighter accent */
+}
+/* Footer Styling */
+.page-footer {
+    background-color: #5A1F1F; /* Deep wine background */
+    color: #F8F5F2; /* Light text color */
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+}
+
+.page-footer p {
+    margin: 0.5rem 0;
+}
+
+.page-footer a {
+    color: #DCC7C7; /* Light wine accent for links */
+    text-decoration: none;
+}
+
+.page-footer a:hover {
+    text-decoration: underline;
+    color: #F2E4E4; /* Brighter hover color */
+}

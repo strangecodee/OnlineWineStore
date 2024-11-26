@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="/css/errorPage.css" />
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="image">
+            <img src="/Images/repairImage.jpg" alt="Error Logo" />
+        </div>
+        <div class="container">
+            <h1>Oops... Something Went Wrong!</h1>
+            <h3>We’re Sorry, Something Unexpected Happened</h3>
+            <p class="description">
+                It seems like we ran into an issue. Here’s what might have gone wrong:
+            </p>
+            <ul class="error-tips">
+                <li>You may be trying to add invalid or null data.</li>
+                <li>The email you entered is already registered.</li>
+            </ul>
+            <div class="actions">
+                <a href="/home/services" class="back-button">Go Back</a>
+                <a href="http://www.google.com" target="_blank" class="help-button">Get Help</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

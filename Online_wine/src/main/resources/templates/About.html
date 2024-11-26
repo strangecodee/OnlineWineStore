@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bareilly Wines</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="" th:href="@{/css/Navigation.css}" />
+    <link rel="stylesheet" href="" th:href="@{/css/Home.css}" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav th:replace="~{Navigation::navbar()}"></nav>
+
+    <!-- Video Background -->
+    <div class="background">
+        <video src="/Videos/vineyard.mp4" loop autoplay muted></video>
+    </div>
+
+    <!-- Content Section -->
+    <div class="text">
+        <h1>Welcome to Bareilly Wines</h1>
+        <h3>Experience the Finest Wines from the Heart of Uttar Pradesh <br /> A Celebration of Taste, Heritage, and Elegance.</h3>
+        <p>
+            At Bareilly Wines, we bring you a selection of wines that are crafted with care, passion, and a deep respect for tradition.<br />
+            Whether you're celebrating a special occasion or looking to add a touch of elegance to your dinner table, our wines promise to deliver unforgettable moments.<br />
+        </p>
+        <div class="cta-buttons">
+            <a href="/products" class="primary">Explore Our Collection</a>
+            <a href="/about" class="secondary">Learn More</a>
+        </div>
+    </div>
+</body>
+
+</html>

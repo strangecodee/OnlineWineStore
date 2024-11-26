@@ -1,0 +1,115 @@
+/* errorPage.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.mainContainer {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+}
+
+.image img {
+    max-height: 200px;
+    width: auto;
+    margin-bottom: 20px;
+    animation: bounce 1.5s infinite;
+}
+
+.container h1 {
+    color: #d9534f;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container h3 {
+    color: #5d5c61;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.container .description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.container .error-tips {
+    text-align: left;
+    margin: 20px auto;
+    padding: 0;
+    list-style-type: disc;
+    max-width: 400px;
+    color: #555;
+}
+
+.container .error-tips li {
+    margin: 10px 0;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.actions .back-button,
+.actions .help-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.actions .back-button {
+    background-color: #5cb85c;
+}
+
+.actions .back-button:hover {
+    background-color: #4cae4c;
+    transform: scale(1.05);
+}
+
+.actions .help-button {
+    background-color: #0275d8;
+}
+
+.actions .help-button:hover {
+    background-color: #025aa5;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

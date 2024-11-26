@@ -1,0 +1,106 @@
+/* Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', serif; /* Sophisticated font */
+    color: #4a4a4a;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: #f8f8f8; /* Neutral background */
+}
+
+/* Navbar */
+nav {
+    z-index: 10;
+}
+
+/* Background Video */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5); /* Darkened background for text contrast */
+}
+
+/* Content Section Styling */
+.text {
+    position: relative;
+    z-index: 2; /* Ensure content is above video */
+    text-align: center;
+    color: white;
+    padding: 150px 20px 0;
+}
+
+.text h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #d4af37; /* Gold color for premium feel */
+}
+
+/* Call-to-Action Buttons */
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.cta-buttons a {
+    text-decoration: none;
+    padding: 12px 25px;
+    margin: 10px;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #8b0000; /* Deep red for call-to-action */
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.cta-buttons a:hover {
+    background-color: #600000; /* Darker red on hover */
+    transform: translateY(-5px);
+}
+
+.cta-buttons a.secondary {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.cta-buttons a.secondary:hover {
+    background-color: #fff;
+    color: #8b0000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .text h1 {
+        font-size: 2.5rem;
+    }
+
+    .text h3 {
+        font-size: 1.2rem;
+    }
+
+    .cta-buttons {}
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Bareilly's Finest Wine Store</title>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="" th:href="@{/css/Navigation.css}" />
+    <link rel="stylesheet" href="" th:href="@{/css/Home.css}" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav th:replace="~{Navigation::navbar()}"></nav>
+
+    <!-- Background Section -->
+    <div class="background">
+        <video src="/Videos/winePouring.mp4" loop autoplay muted></video>
+    </div>
+
+    <!-- Content Section -->
+    <div class="text">
+        <h1>Welcome to Bareilly's Finest Wine Store</h1>
+        <h3>
+            Savor the Taste of Excellence <br />
+            Handpicked Wines Straight from Bareilly, Uttar Pradesh.
+        </h3>
+        <div class="cta-buttons">
+            <a href="/products" class="primary">Explore Wines</a>
+            <a href="/about" class="secondary">Learn About Us</a>
+        </div>
+    </div>
+</body>
+
+
+</html>

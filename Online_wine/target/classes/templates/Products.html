@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Wine Collection</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="" th:href="@{/css/Navigation.css}" />
+    <link rel="stylesheet" href="" th:href="@{/css/Products.css}" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav th:replace="~{Navigation::navbar()}"></nav>
+
+    <!-- Products Section -->
+    <section class="product-row">
+        <div class="product" th:each="s: ${products}">
+            <div class="product-image">
+                <img src="/Images/wine.jpg" alt="wineImage" />
+            </div>
+            <div class="product-info">
+                <h4>Product Name: <span th:text="${s.pname}"></span></h4>
+                <h4>Price: ₹<span th:text="${s.pprice}"></span></h4>
+                <a href="/login" class="buy-now" id="buy">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("buy").addEventListener("click", function () {
+            alert("Please login as a user to buy products.");
+        });
+    </script>
+</body>
+
+</html>

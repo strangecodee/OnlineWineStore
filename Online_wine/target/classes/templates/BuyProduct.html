@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy Wine</title>
+    <link rel="stylesheet" href="/css/BuyProduct.css" />
+</head>
+
+<body>
+    <div class="welcome">
+        Welcome Back 
+        <span th:text="${name}"></span>
+    </div>
+
+    <a href="/login" class="backButton">Back</a>
+
+    <center>
+        <form action="" th:action="@{/product/search}" method="post" class="searchInput">
+            <h1>Product Search</h1>
+            <input type="text" name="productName" required placeholder="Enter Product Name..." />
+            <button type="submit">Search</button>
+            <br />
+            <small th:text="${message}"></small>
+        </form>
+
+        <div th:if="${product!=null}" class="details">
+            <form action="" th:action="@{/product/order}" th:object="${product}" method="post">
+                <label>Product Name:</label>
+                <input type="text" name="oName" th:value="${product.pname}" readonly />
+                <label>Product Price:</label>
+                <input type="text" name="oPrice" th:value="${product.pprice}" readonly />
+                <label>Quantity:</label>
+                <input type="number" placeholder="Minimum: 1" min="1" name="oQuantity" required />
+                <button type="submit">Order Now</button>
+            </form>
+        </div>
+
+        <div th:if="${orders!=null}" class="details">
+            <h2>Your Orders</h2>
+            <table>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Quantity</th>
+                    <th>Total Amount</th>
+                    <th>Date</th>
+                </tr>
+                <tr th:each="order : ${orders}">
+                    <td th:text="${order.oName}"></td>
+                    <td th:text="${order.oPrice}"></td>
+                    <td th:text="${order.oQuantity}"></td>
+                    <td th:text="${order.totalAmmout}"></td>
+                    <td th:text="${order.orderDate}"></td>
+                </tr>
+            </table>
+        </div>
+    </center>
+</body>
+
+</html>

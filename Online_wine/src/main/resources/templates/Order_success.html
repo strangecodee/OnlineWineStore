@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Success</title>
+    <link rel="stylesheet" href="/css/successPage.css" />
+</head>
+
+<body>
+    <div class="mainContainer">
+        <a href="/product/back" class="backButton">Go Back</a>
+        <div class="messageContainer">
+            <h4>Order Placed Successfully!</h4>
+            <h3>Your Purchased Amount is: <span th:text="'₹ '+${amount}+'/-'"></span></h3>
+        </div>
+    </div>
+</body>
+
+</html>

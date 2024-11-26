@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Update Product</title>
+    <link rel="stylesheet" href="" th:href="@{/css/Update_Product.css}" />
+</head>
+
+<body>
+    <a class="back-link" href="/admin/services">Back to Services</a>
+    <div class="update-product-container">
+        <h3 class="form-title">UPDATE EXISTING PRODUCT</h3>
+        <form action="" th:action="@{'/updatingProduct/'+${product.pid}}" th:object="${product}" class="update-product-form">
+            <label for="pname">Product Name:</label>
+            <input type="text" name="pname" th:value="${product.pname}" class="input-field" required />
+
+            <label for="pprice">Product Price:</label>
+            <input type="text" name="pprice" th:value="${product.pprice}" class="input-field" required />
+
+            <label for="pdescription">Product Description:</label>
+            <textarea name="pdescription" th:value="${product.pdescription}" class="input-field" rows="4" required></textarea>
+
+            <input type="hidden" name="pid" th:value="${product.pid}" th:text="${product.pid}" />
+
+            <button type="submit" class="submit-btn">Update Product</button>
+        </form>
+    </div>
+</body>
+
+</html>

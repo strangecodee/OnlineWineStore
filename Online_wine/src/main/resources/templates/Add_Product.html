@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Add New Product</title>
+    <link rel="stylesheet" href="" th:href="@{/css/Add_Product.css}" />
+</head>
+
+<body>
+    <a class="back-link" href="/admin/services">Back to Services</a>
+    <h3 class="form-title">ADD NEW PRODUCT</h3>
+    <div class="add-product-container">
+        <form action="" th:action="@{/addingProduct}" method="post" class="add-product-form">
+            <label for="pname">Product Name:</label>
+            <input type="text" name="pname" value="" placeholder="Enter Product Name..." class="input-field" required />
+
+            <label for="pprice">Product Price:</label>
+            <input type="text" name="pprice" placeholder="Enter Product Price..." class="input-field" required />
+
+            <label for="pdescription">Product Description:</label>
+            <textarea name="pdescription" placeholder="Enter Product Description..." class="input-field" rows="4" required></textarea>
+
+            <button type="submit" class="submit-btn">Add Product</button>
+        </form>
+    </div>
+</body>
+
+</html>

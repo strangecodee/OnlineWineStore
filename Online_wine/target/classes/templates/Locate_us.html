@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wine Store : Location</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="" th:href="@{/css/Navigation.css}" />
+    <link rel="stylesheet" href="" th:href="@{/css/Locate_us.css}" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav th:replace="~{Navigation::navbar()}">
+        <p>Navigation Menu - Wine Store</p>
+    </nav>
+
+    <!-- Location Header -->
+    <div class="location-header">
+        <h1>Our Location: Bareilly, Uttar Pradesh</h1>
+        <small class="location-note"></small>
+    </div>
+
+    <!-- Location Description -->
+    <div class="location-description">
+        <p>
+            We are proudly based in <strong>Bareilly</strong>, Uttar Pradesh. Visit our store or explore our
+            products online for the finest selection of wines.
+        </p>
+    </div>
+
+    <!-- Google Maps Embed -->
+    <div class="location-map">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d798027.1425740547!2d79.4140182463834!3d28.34910340223515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391107af8b16df5f%3A0x8d343b93ab31a23f!2sBareilly%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1695055891336!5m2!1sen!2sin" 
+            width="80%" height="500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</body>
+<!-- Footer -->
+    <footer class="page-footer">
+        <p>&copy; 2024 Bareilly Wine Store. All rights reserved.</p>
+        <p>Follow us: <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i> Instagram</a> | <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i> Facebook</a></p>
+    </footer>
+
+</html>
